@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Banking App</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-L/sLb7A6c/iUGvOrXFtrLvGxXhV8eCk0LYBNAF6uDnVWWux0yZ8gG9fIeml3Q+ZQhxz1XveuVO/Mm1i+kMl3Ew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color: #ffffff;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .container {
+            margin-top: 0;
+            margin-bottom: 0;
+            background-color: #800000;
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .card-section {
+            background-color: beige;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            color:black;
+        }
+
+        .clickable-card {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .clickable-card:hover {
+                background-color: #f0f0f0;
+            }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; /* Adjust as needed */
+            background-color: black;
+            color: white;
+            height:10%;
+        }
+
+        .welcometext {
+            margin-right: auto; /* Pushes the welcoming text to the far left */
+            font-size: 20px;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .notification-icon,
+        .profile-icon {
+            display: flex;
+            align-items: center;
+            margin-left: 10px; /* Adjust spacing between icons */
+            font-size: 20px; /* Adjust icon size */
+            cursor: pointer;
+        }
+
+        .icon-label {
+            margin-left: 5px; /* Adjust spacing between icon and label */
+        }
+
+        .badge {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 4px 8px;
+            font-size: 12px;
+        }
+
+        img{
+            height:200px;
+            width:490px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container text-center">
+
+        <header>
+            <div class="welcometext">
+                Welcome Back<br>Ramadhan!
+            </div>
+
+            <div class="icons">
+                <!-- Notification Icon -->
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <!-- Display the number of notifications -->
+                    <span class="badge">5</span>
+                    <span class="icon-label">Notification</span>
+                </div>
+
+                <!-- Profile Icon -->
+                <div class="profile-icon">
+                    <i class="fas fa-user"></i>
+                    <span class="icon-label">Profile</span>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="card maroon-card">
+            <!-- Greeting Card -->
+            <div class="card-section">
+                <img src="https://i0.wp.com/biznakenya.com/wp-content/uploads/2021/06/Equity-ATM-Cards.jpg?resize=1024%2C658&ssl=1">
+            </div>
+        </div>
+
+        <!-- Separate Cards -->
+        <div class="row mt-3">
+            <!-- Pay Card -->
+            <div class="col-4">
+                <div class="card card-section clickable-card">
+                    <p class="mb-0">Pay</p>
+                </div>
+            </div>
+            <!-- Bills Card -->
+            <div class="col-4">
+                <div class="card card-section clickable-card">
+                    <p class="mb-0">Bills</p>
+                </div>
+            </div>
+            <!-- Cards Card -->
+            <div class="col-4">
+                <div class="card card-section clickable-card">
+                    <p class="mb-0">Cards</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transaction History Card -->
+        <div class="card-section transaction mt-3">
+            <p>History Transaction</p>
+            <ul class="list-unstyled">
+                <li>Transfer to Jane Doe - $20 (Fri 20 Jan 2024)</li>
+                <li>Bills Internet - $10 (Mon 15 Jan 2024)</li>
+            </ul>
+        </div>
+
+        <!-- Card Details Card -->
+        <div class="card-section card-details mt-3">
+            <p>Cards</p>
+            <p class="card-number">Card Number: <strong>1234 5678 9011 9876</strong></p>
+            <p class="card-limit">Card Limit: <strong>$3000</strong></p>
+            <div class="card-management">
+                <p>Card Management:</p>
+                <ul class="list-unstyled">
+                    <li>Add New</li>
+                    <li>Unsubscribe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

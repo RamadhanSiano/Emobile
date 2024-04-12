@@ -1,0 +1,17 @@
+﻿<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="fingerprint">Fingerprint:</label>
+        <input type="text" id="fingerprint" name="fingerprint" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <p class="text-danger">@ViewBag.Error</p>
+</form>
